@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sayi_Sirala", "Sayi_Sirala\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uygulama02.HesapMakinasi", "Uygulama02.HesapMakinasi\Uygulama02.HesapMakinasi.csproj", "{0433F0BE-B709-49D0-9571-70A00BE2941E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineExample", "OnlineExample\OnlineExample.csproj", "{917C7110-E47A-462D-8AC9-C5903D67DEF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0433F0BE-B709-49D0-9571-70A00BE2941E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0433F0BE-B709-49D0-9571-70A00BE2941E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0433F0BE-B709-49D0-9571-70A00BE2941E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{917C7110-E47A-462D-8AC9-C5903D67DEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917C7110-E47A-462D-8AC9-C5903D67DEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917C7110-E47A-462D-8AC9-C5903D67DEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917C7110-E47A-462D-8AC9-C5903D67DEF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@ namespace Sayi_Sirala
         {
             int degisken;
            
-            int[] sayilar = { 1, 7, 6, 8, 9, 10 };
+            int[] sayilar = { 1, 7, 6, 4, 9, -10 };
 
             Console.WriteLine("Mevcut sayılar");
             foreach (var sayi in sayilar)
