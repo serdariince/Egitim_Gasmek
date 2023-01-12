@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
-
 namespace Odev03
 {
     internal class Program
@@ -14,6 +13,7 @@ namespace Odev03
     }
     class User
     {
+
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public DateTime DogumTarihi { get; set; }
@@ -31,21 +31,37 @@ namespace Odev03
     }
     class UserInfo
     {
-        User user = new User()
-        {
-            Ad = "Sevda",
-            Soyad = "İNCE",
-            DogumTarihi = new DateTime(1997, 06, 27),
-            Para = 1000,
-            VisitedPlaces = new List<VisitedPlaces>() {
-                new VisitedPlaces { Ulke="Turkiye",Sehri="Gaziantep",PostaKodu=2700,TanistigiKisiler=new Dictionary<string, string>(){{"01", "Serdar İnce"},}},
-                new VisitedPlaces { Ulke="Turkiye",Sehri="Nevşehir",PostaKodu=50040,TanistigiKisiler=new Dictionary<string, string>(){{"01", "Sara Algan"}}},
-            },
-        };
-        public string Info()
-        {
+
+        public  string Info()
+        {        
+            User user = new User();      
+
+            user.Ad = "Sevda";
+            user.Soyad = "İNCE";
+            user.DogumTarihi = new DateTime(1997, 06, 27);
+            user.Para = 1000;
+
+            VisitedPlaces sehir1=new VisitedPlaces();
+            sehir1.Ulke="Türkiye";
+            sehir1.Sehri="Gaziantep";
+            sehir1.PostaKodu=2700;            
+            
+
+
+            Dictionary<string,string> ark1=new Dictionary<string, string>();
+            ark1.Add("01","Serdar İNCE");
+            ark1.Add("02","Hasan İNCE");
+            ark1.Add("03","Muzaffer İNCE");
+            sehir1.TanistigiKisiler=ark1;
+
+            List<VisitedPlaces> sehirler=new List<VisitedPlaces>();
+            sehirler.Add(sehir1);
+
+
+            
+            user.VisitedPlaces=sehirler;
+
             string gezilenYerler = "";
-            string cumle = "";
             foreach (var gezilenYer in user.VisitedPlaces)
             {
                 string kisiListesi = "";
@@ -53,10 +69,9 @@ namespace Odev03
                 {
                     kisiListesi = kisiListesi + kisi.Value + ", ";
                 }
-                gezilenYerler = gezilenYerler + (" Ülke:" + gezilenYer.Ulke + " Şehir:" + gezilenYer.Sehri + " Posta Kodu :" + gezilenYer.PostaKodu + " " + gezilenYer.TanistigiKisiler.Count + " kişi ile tanıştı bunlar sırası ile :" + kisiListesi);
+                gezilenYerler = gezilenYerler + (gezilenYer.Ulke + ", " + gezilenYer.Sehri + "'de " + gezilenYer.TanistigiKisiler.Count + " kişi ile tanıştı bunlar sırası ile " + kisiListesi);
             }
-            cumle = user.Ad + " " + user.Soyad;
-            return cumle + " " + gezilenYerler;
+            return $"{user.Ad} {user.Soyad} {gezilenYerler}";
         }
     }
 
